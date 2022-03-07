@@ -1,2 +1,2 @@
 # job_data_analysis
-Web scrape Indeed.com and analyse the dataset
+Web scraping of Indeed.com and analyse the dataset.
