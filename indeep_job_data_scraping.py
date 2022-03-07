@@ -143,7 +143,7 @@ l.append(sal)
 l = list(map(list, zip(*l)))
 df = pd.DataFrame(l, columns=['job_title', 'company_name', 'company_location', 'salary'])
 print(df.head())
-df.to_excel(r'Indeed_job_data\output\indeed_jobs_scan.xlsx')
+df.to_excel(r'.\output\indeed_jobs_scan.xlsx')
 print('Saved to Excel')
 
 
