@@ -231,7 +231,6 @@ df['job_category'] = df['job_title'].apply(map_to_job_category)
 df['date_scrapped'] = pd.Timestamp.today()
 print(df.head())
 # df.to_excel(r'..\Indeed_job_data\output\indeed_jobs_scan.xlsx')
-# path = r'C:\Users\goldsby_c\OneDrive - Pearson PLC\Add-hoc analysis projects\Indeed_job_data\output\indeed_jobs_scan.xlsx'
 # df.to_excel(path)
 # print('Saved to Excel')
 
