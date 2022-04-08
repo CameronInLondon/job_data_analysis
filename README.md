@@ -1,2 +1,2 @@
 # job_data_analysis
-Web scraping of Indeed.com and analyse the dataset.
+Web scraping of Indeed.com and analysis of roles, job type category and salaries.
