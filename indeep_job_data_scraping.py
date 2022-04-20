@@ -71,7 +71,7 @@ def company_name(soup):
 
 
 def company_location(soup):
-    # find the Html tag with find() and convert into string
+    """Func to get the company location"""
     data_str = ""
     result = ""
     for item in soup.find_all(class_="companyLocation"):
@@ -152,8 +152,8 @@ if __name__ == "__main__":
     num = 0
     # check number of jobs for search and use that number
     # but restrict max 300 jobs download.
-    if int(total_jobs) > 200:
-        restrictor = 200
+    if int(total_jobs) > 300:
+        restrictor = 300
     else:
         restrictor = total_jobs
 
@@ -203,6 +203,7 @@ l.append(date_added)
 # transpose list of lists so it fits into a df
 l = list(map(list, zip(*l)))
 df = pd.DataFrame(l, columns=['job_title', 'company_name', 'company_location', 'salary', 'date_added'])
+print(df)
 # remove duplicate values
 print(df.shape)
 df = df.drop_duplicates()
@@ -235,10 +236,7 @@ print(df.head())
 # print('Saved to Excel')
 
 print('------------ save to DB ---------------')
-# conn = sqlite3.connect(r'.\Indeed_job_data\indeed_jobs_db.db') # started to get error with this so using full path
-
-conn = sqlite3.connect(
-    r'C:\Users\goldsby_c\OneDrive - Pearson PLC\Add-hoc analysis projects\Indeed_job_data\indeed_jobs_db.db')
+conn = sqlite3.connect(r'..\Indeed_job_data\indeed_jobs_db.db')  # started to get error with this so using full path
 
 
 conn.execute('''CREATE TABLE IF NOT EXISTS JOBS
